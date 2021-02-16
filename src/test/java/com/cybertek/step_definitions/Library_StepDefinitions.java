@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class Library_StepDefinitions {
     @Given("user is on the login page")
@@ -15,6 +16,8 @@ public class Library_StepDefinitions {
     public void user_Enter_Librarian_Username() {
         System.out.println("User enters LIBRARIAN username");
 
+        //Intentionally failing this step
+       // Assert.fail("INTENTIONAL FAIL!!!!!!!!!!!!");
     }
 
     @And("user enter librarian password")
@@ -27,13 +30,7 @@ public class Library_StepDefinitions {
          System.out.println("User sees dashboard");
     }
     
-   
-   
-   
-    @Given("user is on the login page")
-    public void user_in_on_the_login_page(){
-        System.out.println("");
-    }
+
 
     @When("user enters student username")
     public void userEntersStudentUsername() {
@@ -42,16 +39,18 @@ public class Library_StepDefinitions {
 
     @And("user enters student password")
     public void userEntersStudentPassword() {
-        System.out.println("User enters student password");
+        System.out.println("User enters STUDENT password");
     }
 
     @When("user enter admin username")
     public void userEnterAdminUsername() {
+        System.out.println("User enters ADMIN username");
         
     }
 
-    @And("user enter admin  password")
+    @When("user enter admin  password")
     public void userEnterAdminPassword() {
+        System.out.println("User enters ADMIN password");
 
     }
 }

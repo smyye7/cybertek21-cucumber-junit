@@ -48,7 +48,7 @@ public class Google_StepDefinitions {
 
         Assert.assertTrue(actualTitle.contains(expectedInTitle));
 
-
+        Driver.closeDriver();
     }
 
 
@@ -59,7 +59,12 @@ public class Google_StepDefinitions {
     }
 
     @Then("User should see {string} in the title")
-    public void user_should_see_in_the_title(){
+    public void user_should_see_in_the_title(String string){
+        String actualTitle=Driver.getDriver().getTitle();
+        String expectedInTitle=string;
+        Assert.assertTrue(actualTitle.contains(expectedInTitle));
+
+        Driver.closeDriver();
 
     }
 
