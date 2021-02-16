@@ -12,14 +12,46 @@ public class Library_StepDefinitions {
     }
 
     @When("user enter librarian username")
-    public void userEnterLibrarianUsername() {
+    public void user_Enter_Librarian_Username() {
+        System.out.println("User enters LIBRARIAN username");
+
     }
 
     @And("user enter librarian password")
-    public void userEnterLibrarianPassword() {
+    public void user_Enter_Librarian_Password() {
+        System.out.println("User enters LIBRARIAN password");
      }
 
      @Then("user should see dashboard")
-    public void userShouldSeeDashboard() {
+    public void user_Should_See_Dashboard() {
+         System.out.println("User sees dashboard");
+    }
+    
+   
+   
+   
+    @Given("user is on the login page")
+    public void user_in_on_the_login_page(){
+        System.out.println("");
+    }
+
+    @When("user enters student username")
+    public void userEntersStudentUsername() {
+        System.out.println("User enters STUDENT username");
+    }
+
+    @And("user enters student password")
+    public void userEntersStudentPassword() {
+        System.out.println("User enters student password");
+    }
+
+    @When("user enter admin username")
+    public void userEnterAdminUsername() {
+        
+    }
+
+    @And("user enter admin  password")
+    public void userEnterAdminPassword() {
+
     }
 }

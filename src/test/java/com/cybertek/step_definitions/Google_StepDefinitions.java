@@ -10,6 +10,18 @@ import org.openqa.selenium.Keys;
 
 public class Google_StepDefinitions {
 
+    @Then("User should see title is Google")
+    public void user_should_title_is_google(){
+        String actual=Driver.getDriver().getTitle();
+        String expected="Google";
+
+        Assert.assertTrue(actual.equals(expected));
+
+        // all of the above done in one line.
+        //Assert.assertTrue
+
+    }
+
 
     @Given("User is on Google home page")
     public void user_is_on_google_home_page() {
@@ -38,6 +50,29 @@ public class Google_StepDefinitions {
 
 
     }
+
+
+    @When("User searches for {string}")
+    public void userSearchesFor(String string) {
+        GoogleSearchPage googleSearchPage=new GoogleSearchPage();
+        googleSearchPage.searchBar.sendKeys(string+Keys.ENTER);
+    }
+
+    @Then("User should see {string} in the title")
+    public void user_should_see_in_the_title(){
+
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
