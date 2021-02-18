@@ -14,8 +14,19 @@ Feature: Google search functionality
     Then User should see apple in the title
 
 
-    @wip
+  @wip
   Scenario: User search title verification
     Given User is on Google home page
     When User searches for "orange"
     Then User should see "orange" in the title
+
+
+  @googleDataTable
+  Scenario: Google home page footer link verification
+    Given User is on Google home page
+    Then User should see following links
+      |Advertising     |
+      |Business        |
+      |How Search Works|
+      |Privacy         |
+      |Terms           |
