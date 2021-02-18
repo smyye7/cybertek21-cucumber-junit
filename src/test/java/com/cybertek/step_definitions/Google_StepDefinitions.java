@@ -7,8 +7,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class Google_StepDefinitions {
+
+    GoogleSearchPage googleSearchPage=new GoogleSearchPage();
 
     @Then("User should see title is Google")
     public void user_should_title_is_google(){
@@ -67,7 +72,19 @@ public class Google_StepDefinitions {
       //  Driver.closeDriver();
 
     }
+    @Then("User should see following links")
+    public void user_should_see_following_links(List<String> expectedfooterLinks) {
+        System.out.println("footerLinks = " + expectedfooterLinks);
 
+        for(WebElement eachLink: googleSearchPage.footerLinks){
+            System.out.println("eachLink = " + eachLink.getText());
+        }
+
+        //create a list of strings(as a place holder
+        //loop through List of WebElements
+        //
+
+    }
 
 
 

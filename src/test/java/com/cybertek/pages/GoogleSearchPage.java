@@ -17,7 +17,8 @@ public class GoogleSearchPage {
     public WebElement searchBar;
 
 
-    //instead of using
+    //instead of using findElements method, we can directly use 2FindBy
+    //and if locator
 
     @FindBy(xpath = "//a[@class='pHiOh']")
     public List<WebElement> footerLinks;
