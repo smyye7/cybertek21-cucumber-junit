@@ -24,7 +24,7 @@ Feature: Library app login feature
 
     #@wip #work in progress
 
-  @admin @employee
+  @admin @employee @db
   Scenario: Login as admin
     When user enter admin username
     And user enter admin  password
