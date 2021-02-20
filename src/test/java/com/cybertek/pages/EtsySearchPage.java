@@ -14,14 +14,4 @@ public class EtsySearchPage {
     @FindBy(id = "global-enhancements-search-query")
     public WebElement searchBox;
 
-
-
-
-
-
-
-
-
-
-
 }

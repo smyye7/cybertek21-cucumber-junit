@@ -6,7 +6,7 @@ Feature: SmartBear order process
     Then User should be on Web order Page
 
 
-  @wip
+  @smartBearOutline
   Scenario Outline:
     Given tester login using "Tester" and "test" and click login button
     When tester click order button
@@ -22,6 +22,7 @@ Feature: SmartBear order process
     And tester enters "<expiration date>" to expiration date
     And tester click process button
     Then tester verify "<expectedName>" is in the list
+
     Examples:
       | product     | quantity | costumer name   | street      | city    | state | zip   | cardType | card number  | expiration date | expectedName    |
       | MyMoney     | 1        | Ken Adams       | Kinzie st   | Chicago | IL    | 60004 | Visa     | 313313133315 | 12/22           | Ken Adams       |
